@@ -25,8 +25,7 @@ body {
 /* ---------- Page ---------- */
 .page-head { max-width: 540px; margin: 0 auto; padding: 48px 0 32px; text-align: center; }
 .page-eyebrow { color: var(--gold); font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; }
-.page-head h1 { margin: 8px 0 12px; font-family: var(--serif); font-size: 2.25rem; color: #fff; }
-.page-note { color: #9ca3af; font-size: 0.95rem; line-height: 1.5; }
+.page-head h1 { margin: 8px 0 0; font-family: var(--serif); font-size: 2.25rem; color: #fff; }
 
 .flyer-list { display: grid; gap: 56px; justify-items: center; }
 .flyer-card { width: 100%; max-width: 540px; }
@@ -207,7 +206,7 @@ body {
   border-radius: 4px;
   background: linear-gradient(to right, var(--gold-dark), var(--gold) 50%, var(--gold-dark));
   box-shadow: 0 0 50px rgba(212, 175, 55, 0.3);
-  color: #000;
+  color: #0a0a2e;
 }
 .fl-cta-label {
   font-size: 30px;
