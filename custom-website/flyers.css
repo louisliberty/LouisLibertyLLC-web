@@ -128,6 +128,8 @@ body {
 }
 
 .fl-headline {
+  position: relative;
+  top: -10px; /* even out the space above and below */
   align-self: stretch;
   white-space: nowrap;
   font-family: var(--serif);
