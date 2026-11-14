@@ -20,7 +20,7 @@ if ("ResizeObserver" in window) {
 
 /* ---------- Shrink headlines that would run past the edges ---------- */
 function fitText() {
-  document.querySelectorAll(".fl-headline, .fl-tagline").forEach((el) => {
+  document.querySelectorAll(".fl-headline").forEach((el) => {
     el.style.fontSize = "";
     let size = parseFloat(getComputedStyle(el).fontSize);
     while (el.scrollWidth > el.clientWidth && size > 24) {

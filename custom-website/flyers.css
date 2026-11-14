@@ -137,16 +137,16 @@ body {
   line-height: 1.12;
   letter-spacing: -0.01em;
 }
-.fl-tagline {
-  align-self: stretch;
-  margin-top: -12px;
-  color: #e5e7eb;
-  font-size: 38px;
-  font-weight: 500;
-  white-space: nowrap;
+.fl-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 56px 26px;
+  border: 3px solid var(--gold);
+  border-radius: 10px;
+  background: linear-gradient(to bottom, rgba(212, 175, 55, 0.14), rgba(212, 175, 55, 0.04));
+  box-shadow: 0 0 60px rgba(212, 175, 55, 0.25), inset 0 0 40px rgba(212, 175, 55, 0.08);
 }
-
-.fl-price { display: flex; flex-direction: column; align-items: center; }
 .fl-price-label {
   color: #fff;
   font-size: 40px;
