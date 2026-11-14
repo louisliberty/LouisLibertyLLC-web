@@ -11,6 +11,7 @@ The website for Louis Liberty LLC. It's a plain static site (HTML, CSS and JavaS
 | `assets/js/main.js` | Gold particles, fade-in animations, Calendly booking widget, contact form |
 | `assets/img/` | Logo and portfolio screenshots |
 | `404.html` | "Page not found" page |
+| `custom-website/` | Hidden flyer maker at /custom-website/ (not indexed by search engines). Design flyers in HTML and save them as 1080×1350 PNGs |
 | `robots.txt`, `sitemap.xml`, `favicon.*`, `apple-touch-icon.png` | Search engine and browser-tab files |
 
 ## Common edits
@@ -18,6 +19,10 @@ The website for Louis Liberty LLC. It's a plain static site (HTML, CSS and JavaS
 - **Change wording:** edit the text in `index.html`.
 - **Add a portfolio item:** copy one `<article class="card portfolio-card">` block in `index.html`, put the new screenshot in `assets/img/`, and update the image path and title.
 - **Change the booking link:** edit `CALENDLY_URL` at the top of `assets/js/main.js`.
+
+## Flyers (/custom-website/)
+
+Each flyer is an `<article class="flyer-card">` block in `custom-website/index.html`. To make a new one, copy a block, change the text, and give its `.flyer` a new `data-filename`. The **Download PNG** button saves it at Facebook's feed size, and on phones a **Share** button sends it straight to an app. The page has a `noindex` tag and isn't linked from the main site.
 
 ## Contact form
 
