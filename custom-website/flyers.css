@@ -167,12 +167,21 @@ body {
   white-space: nowrap;
 }
 .fl-price-amount {
+  display: flex;
+  align-items: flex-start;
   font-family: var(--serif);
   font-weight: 700;
   font-size: 210px;
-  line-height: 0.95;
+  line-height: 0.9;
+  font-variant-numeric: lining-nums; /* full-height digits, not the font's low "old-style" ones */
+  font-feature-settings: "lnum" 1;
   color: var(--gold);
   text-shadow: 0 0 60px rgba(212, 175, 55, 0.35);
+}
+.fl-currency {
+  margin: 0.1em 0.04em 0 0;
+  font-size: 0.5em;
+  line-height: 1;
 }
 
 .fl-list {
