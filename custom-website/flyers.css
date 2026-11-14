@@ -91,7 +91,7 @@ body {
 .flyer-content {
   position: relative;
   height: 100%;
-  padding: 84px 80px 72px;
+  padding: 84px 80px 58px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -198,11 +198,11 @@ body {
 
 .fl-bottom { width: 100%; }
 .fl-cta {
-  padding: 26px 32px 30px;
+  padding: 14px 32px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 0;
   border: 2px solid var(--gold-light);
   border-radius: 4px;
   background: linear-gradient(to right, var(--gold-dark), var(--gold) 50%, var(--gold-dark));
@@ -222,7 +222,7 @@ body {
 }
 
 .fl-site {
-  margin-top: 18px;
+  margin-top: 14px;
   color: var(--gold);
   font-size: 28px;
   font-weight: 500;
