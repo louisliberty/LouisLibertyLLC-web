@@ -140,15 +140,8 @@ body {
   letter-spacing: -0.01em;
 }
 
-.fl-sub {
-  margin-top: 34px;
-  color: #d1d5db;
-  font-size: 32px;
-  line-height: 1.45;
-}
-
 .fl-price {
-  margin-top: 60px;
+  margin-top: 44px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,28 +165,27 @@ body {
 }
 
 .fl-list {
-  margin: 34px 0 40px;
+  margin: 30px 0 44px;
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 20px 40px;
+  gap: 18px;
   text-align: left;
 }
 .fl-list li {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 20px;
   color: #f3f4f6;
-  font-size: 25px;
+  font-size: 36px;
   font-weight: 500;
   white-space: nowrap;
 }
 .fl-list svg {
   flex-shrink: 0;
-  width: 34px;
-  height: 34px;
-  padding: 6px;
+  width: 46px;
+  height: 46px;
+  padding: 8px;
   border-radius: 50%;
   background: rgba(212, 175, 55, 0.15);
   fill: none;
