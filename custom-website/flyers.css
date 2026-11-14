@@ -326,16 +326,4 @@ body {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-
-.fl-signoff {
-  margin-top: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  color: var(--gold);
-  font-size: 26px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-}
-.fl-logo-sm { width: 52px; height: 52px; padding: 4px; box-shadow: none; }
+.flyer-v2 .flyer-content { padding-bottom: 84px; }
