@@ -129,23 +129,10 @@ body {
   text-transform: uppercase;
 }
 
-.fl-pill {
-  margin-top: 52px;
-  padding: 10px 28px;
-  border: 1px solid rgba(212, 175, 55, 0.6);
-  border-radius: 999px;
-  background: rgba(212, 175, 55, 0.08);
-  color: var(--gold-light);
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-}
-
 .fl-headline {
   align-self: stretch;
   white-space: nowrap;
-  margin-top: 34px;
+  margin-top: 72px;
   font-family: var(--serif);
   font-weight: 700;
   font-size: 80px;
@@ -154,36 +141,38 @@ body {
 }
 
 .fl-sub {
-  margin-top: 26px;
+  margin-top: 34px;
   color: #d1d5db;
   font-size: 32px;
   line-height: 1.45;
 }
 
 .fl-price {
-  margin-top: 40px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .fl-price-label {
-  color: #e5e7eb;
-  font-size: 26px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
+  color: #fff;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 0 24px rgba(212, 175, 55, 0.35);
 }
 .fl-price-amount {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: 180px;
+  font-size: 200px;
   line-height: 1;
   color: var(--gold);
   text-shadow: 0 0 60px rgba(212, 175, 55, 0.35);
 }
 
 .fl-list {
-  margin: 28px 0 40px;
+  margin: 34px 0 40px;
   padding: 0;
   list-style: none;
   display: grid;
