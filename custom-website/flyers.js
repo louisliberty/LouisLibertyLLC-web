@@ -18,9 +18,9 @@ if ("ResizeObserver" in window) {
   window.addEventListener("resize", () => stages.forEach(fit));
 }
 
-/* ---------- Shrink headlines that would run past the edges ---------- */
+/* ---------- Shrink lines that would run past the edges ---------- */
 function fitText() {
-  document.querySelectorAll(".fl-headline").forEach((el) => {
+  document.querySelectorAll(".fl-headline, .fl-points").forEach((el) => {
     el.style.fontSize = "";
     let size = parseFloat(getComputedStyle(el).fontSize);
     while (el.scrollWidth > el.clientWidth && size > 24) {
