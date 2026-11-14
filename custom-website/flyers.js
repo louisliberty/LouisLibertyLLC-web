@@ -20,10 +20,10 @@ if ("ResizeObserver" in window) {
 
 /* ---------- Shrink headlines that would run past the edges ---------- */
 function fitText() {
-  document.querySelectorAll(".fl-headline").forEach((el) => {
+  document.querySelectorAll(".fl-headline, .fl-tagline").forEach((el) => {
     el.style.fontSize = "";
     let size = parseFloat(getComputedStyle(el).fontSize);
-    while (el.scrollWidth > el.clientWidth && size > 40) {
+    while (el.scrollWidth > el.clientWidth && size > 24) {
       size -= 2;
       el.style.fontSize = size + "px";
     }
@@ -50,22 +50,10 @@ async function renderPng(flyer) {
   return window.htmlToImage.toPng(flyer, options);
 }
 
-async function toFile(dataUrl, name) {
-  const blob = await (await fetch(dataUrl)).blob();
-  return new File([blob], name, { type: "image/png" });
-}
-
 document.querySelectorAll(".flyer-card").forEach((card) => {
   const flyer = card.querySelector(".flyer");
   const name = flyer.dataset.filename || "flyer.png";
   const downloadBtn = card.querySelector('[data-action="download"]');
-  const shareBtn = card.querySelector('[data-action="share"]');
-
-  // Phones that can share images get a Share button (post straight to Facebook).
-  try {
-    const probe = new File([""], name, { type: "image/png" });
-    if (navigator.canShare && navigator.canShare({ files: [probe] })) shareBtn.hidden = false;
-  } catch (e) { /* sharing not supported */ }
 
   async function run(btn, label, action) {
     if (!window.htmlToImage) return alert("Still loading, try again in a moment.");
@@ -74,10 +62,8 @@ document.querySelectorAll(".flyer-card").forEach((card) => {
     try {
       await action(await renderPng(flyer));
     } catch (err) {
-      if (err && err.name !== "AbortError") {
-        console.error(err);
-        alert("Sorry, the image couldn't be created. Please try again.");
-      }
+      console.error(err);
+      alert("Sorry, the image couldn't be created. Please try again.");
     } finally {
       btn.disabled = false;
       btn.textContent = label;
@@ -85,19 +71,13 @@ document.querySelectorAll(".flyer-card").forEach((card) => {
   }
 
   downloadBtn.addEventListener("click", () =>
-    run(downloadBtn, "Download PNG", (dataUrl) => {
+    run(downloadBtn, "Download", (dataUrl) => {
       const a = document.createElement("a");
       a.href = dataUrl;
       a.download = name;
       document.body.appendChild(a);
       a.click();
       a.remove();
-    })
-  );
-
-  shareBtn.addEventListener("click", () =>
-    run(shareBtn, "Share", async (dataUrl) => {
-      await navigator.share({ files: [await toFile(dataUrl, name)] });
     })
   );
 });

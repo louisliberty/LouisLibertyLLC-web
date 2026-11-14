@@ -22,7 +22,7 @@ The website for Louis Liberty LLC. It's a plain static site (HTML, CSS and JavaS
 
 ## Flyers (/custom-website/)
 
-Each flyer is an `<article class="flyer-card">` block in `custom-website/index.html`. To make a new one, copy a block, change the text, and give its `.flyer` a new `data-filename`. The **Download PNG** button saves it at Facebook's feed size, and on phones a **Share** button sends it straight to an app. The page has a `noindex` tag and isn't linked from the main site.
+Each flyer is an `<article class="flyer-card">` block in `custom-website/index.html`. To make a new one, copy a block, change the text, and give its `.flyer` a new `data-filename`. The **Download** button saves it as a PNG at Facebook's feed size. The page has a `noindex` tag and isn't linked from the main site.
 
 ## Contact form
 
